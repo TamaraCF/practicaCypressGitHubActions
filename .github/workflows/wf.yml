@@ -1,7 +1,6 @@
 name: Workflow CICD test with Cypress
 
 on: 
-  workflow_dispatch:
   push:
     branches: [ master ]
 

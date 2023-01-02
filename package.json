@@ -1,63 +1,15 @@
 {
-  "name": "@cypress/github-action",
-  "version": "0.0.0-development",
-  "description": "GitHub Action for running Cypress end-to-end tests",
-  "private": false,
-  "main": "dist/index.js",
-  "files": [
-    "dist",
-    "src",
-    "action.yml"
-  ],
+  "name": "example-basic",
+  "version": "1.0.0",
+  "description": "basic example how to run Cypress tests",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"There are no tests :(\"",
-    "build": "ncc build -o dist index.js",
-    "format": "prettier --write index.js",
-    "check:markdown": "find *.md -print0 | xargs -0 -n1 markdown-link-check -c md-linkcheck.json",
-    "install-v10-deps": "./scripts/npm-install-v10-examples.sh"
+    "test": "cypress run"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cypress-io/github-action.git"
-  },
-  "keywords": [
-    "actions",
-    "cypress-io"
-  ],
-  "author": "Gleb Bahmutov <gleb@cypress.io>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cypress-io/github-action/issues"
-  },
-  "homepage": "https://github.com/cypress-io/github-action#readme",
-  "dependencies": {
-    "@actions/cache": "3.0.6",
-    "@actions/core": "1.10.0",
-    "@actions/exec": "1.1.1",
-    "@actions/io": "1.1.2",
-    "@octokit/core": "3.6.0",
-    "argument-vector": "1.0.2",
-    "debug": "4.3.4",
-    "execa": "6.1.0",
-    "find-yarn-workspace-root": "2.0.0",
-    "got": "11.8.3",
-    "hasha": "5.2.2",
-    "quote": "0.4.0"
-  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
   "devDependencies": {
-    "@types/node": "18.11.17",
-    "@vercel/ncc": "0.34.0",
-    "husky": "7.0.4",
-    "markdown-link-check": "3.10.3",
-    "prettier": "2.6.2",
-    "stop-build": "1.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format && npm run build && git add index.js dist"
-    }
+    "cypress": "^10.0.0"
   }
 }

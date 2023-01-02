@@ -1,4 +1,4 @@
-# Oysho - Regression web
+# Oysho - Regression web.
 
 
 ## Usage

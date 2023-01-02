@@ -2,7 +2,7 @@
 
 > [GitHub Action](https://docs.github.com/en/actions) for running [Cypress](https://www.cypress.io) end-to-end tests. Includes NPM installation, custom caching and lots of configuration options.
 
-## Examples
+## Examples:
 
 - [Basic](#basic)
 - [Explicit version](#explicit-version)

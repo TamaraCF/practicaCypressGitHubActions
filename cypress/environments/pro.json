@@ -1,8 +1,0 @@
-{
-  "baseUrl": "https://www.oysho.com/",
-  "retries": {
-    "runMode": 0,
-    "openMode": 0
-  },
-  "env": {}
-} 

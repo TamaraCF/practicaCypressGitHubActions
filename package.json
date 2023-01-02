@@ -1,0 +1,53 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "Repository for base tests in Cypress",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run clean",
+    "test": "env-cmd --silent cypress-tags run -b chrome --headed",
+    "clean": "rimraf reports",
+    "cypress:open": "env-cmd --silent cypress open",
+    "report:build:credentials": "env-cmd --silent envsubst < utils/jira_report_config.json.template > utils/jira_report_config.json",
+    "report:build": "node utils/buildReport.js",
+    "postreport:build": "cucumber-json-merge -d reports/cucumber-preprocessor-jsons -o reports/cucumber.json",
+    "report:upload": "node utils/reportJira.js",
+    "lint:js": "eslint .",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:gherkin": "gherkin-lint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:globe_testing/internal/tools/auto-cypress-fw-project.git"
+  },
+  "keywords": [],
+  "author": "Globe Testing",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "cucumber-json-merge": "0.0.7",
+    "cypress": "^7.4.0",
+    "cypress-real-events": "^1.7.1",
+    "env-cmd": "^10.1.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "node-fetch": "^2.6.1",
+    "nodejs-base64": "^2.0.0",
+    "rimraf": "^3.0.2",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "eslint": "^7.27.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "gherkin-lint": "^4.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber-preprocessor-jsons",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

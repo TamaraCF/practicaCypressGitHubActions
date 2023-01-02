@@ -1,0 +1,9 @@
+node_modules/
+reports/
+.history
+.vscode
+.npmrc
+.env
+cypress/environments/local.json
+cypress.env.json
+jira_report_config.json

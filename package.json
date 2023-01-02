@@ -1,14 +1,7 @@
 {
-  "name": "example-basic",
+  "name": "GitHub Actions",
   "version": "1.0.0",
-  "description": "basic example how to run Cypress tests",
-  "main": "index.js",
-  "scripts": {
-    "test": "cypress run"
-  },
-  "author": "",
-  "license": "ISC",
-  "private": true,
+  "description": "Practice about GitHub Actions with Cypress: define a workflow",
   "devDependencies": {
     "cypress": "^10.0.0"
   }
